@@ -1,3 +1,12 @@
+:root {
+  --skin-color: #ec1839;
+  --bg-black-900: #f2f2fc;
+  --bg-black-100: #fdf9ff;
+  --bg-black-50: #e8dfec;
+  --text-black-900: #302e4d;
+  --text-black-700: #504e70;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +20,8 @@
   display: none !important;
 }
 
-row, skill {
+row,
+skill {
   display: block;
   margin: 0;
   padding: 0;
@@ -24,6 +34,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body.dark {
+  --bg-black-900: #151515;
+  --bg-black-100: #222;
+  --bg-black-50: #393939;
+  --text-black-900: #fff;
+  --text-black-700: #e9e9e9;
+}
+
 .btn {
   font-size: 16px;
   font-weight: 500;
@@ -31,7 +49,7 @@ body {
   color: #fff;
   border-radius: 40px;
   border: none;
-  background-color: #ec1839;
+  background-color: var(--skin-color);
   display: inline-block;
   white-space: nowrap;
   -webkit-transition: all 0.3s ease;
@@ -50,14 +68,14 @@ body {
 
 aside {
   width: 270px;
-  background: #fdf9ff;
+  background: var(--bg-black-100);
   position: fixed;
   left: 0;
   top: 0;
   height: 100%;
   z-index: 17;
   padding: 30px;
-  border-right: 1px solid #e8dfec;
+  border-right: 1px solid var(--bg-black-50);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,7 +95,7 @@ aside .logo {
 }
 
 aside .logo a {
-  color: #302e4d;
+  color: var(--text-black-900);
   font-weight: 700;
   padding: 15px 20px;
   font-size: 30px;
@@ -115,13 +133,13 @@ aside .logo a span {
 aside .nav-toggle {
   height: 40px;
   width: 45px;
-  border: 1px solid #e8dfec;
+  border: 1px solid var(--bg-black-50);
   cursor: pointer;
   position: fixed;
   top: 20px;
   left: 300px;
   border-radius: 5px;
-  background: #fdf9ff;
+  background: var(--bg-black-100);
   display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -134,7 +152,7 @@ aside .nav-toggle {
 aside .nav-toggle span {
   height: 2px;
   width: 18px;
-  background: #ec1839;
+  background: var(--skin-color);
   display: inline-block;
   position: relative;
 }
@@ -143,7 +161,7 @@ aside .nav-toggle span:before {
   content: '';
   height: 2px;
   width: 18px;
-  background: #ec1839;
+  background: var(--skin-color);
   position: absolute;
   top: -6px;
   left: 0;
@@ -153,7 +171,7 @@ aside .nav-toggle span:after {
   content: '';
   height: 2px;
   width: 18px;
-  background: #ec1839;
+  background: var(--skin-color);
   position: absolute;
   top: 6px;
   left: 0;
@@ -172,8 +190,8 @@ aside ul li a {
   font-size: 16px;
   font-weight: 600;
   display: block;
-  color: #302e4d;
-  border-bottom: 1px solid #e8dfec;
+  color: var(--text-black-900);
+  border-bottom: 1px solid var(--bg-black-50);
   padding: 5px 15px;
 }
 
@@ -190,7 +208,7 @@ aside ul li a i {
 }
 
 .section {
-  background: #fdf9ff;
+  background: var(--bg-black-100);
   min-height: 100vh;
   display: block;
   opacity: 1;
@@ -212,7 +230,7 @@ aside ul li a i {
 
 .section .section-title h2 {
   font-size: 40px;
-  color: #302e4d;
+  color: var(--text-black-900);
   font-weight: 700;
   position: relative;
 }
@@ -221,7 +239,7 @@ aside ul li a i {
   content: '';
   height: 4px;
   width: 50px;
-  background-color: #ec1839;
+  background-color: var(--skin-color);
   position: absolute;
   top: 100%;
   left: 0;
@@ -231,7 +249,7 @@ aside ul li a i {
   content: '';
   height: 4px;
   width: 25px;
-  background-color: #ec1839;
+  background-color: var(--skin-color);
   position: absolute;
   top: 100%;
   left: 0;
@@ -266,7 +284,7 @@ row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #302e4d;
+  color: var(--text-black-900);
 }
 
 .home .home-info {
@@ -284,7 +302,7 @@ row {
 .home .home-info h3.hello span {
   font-family: cursive;
   font-weight: 700;
-  color: #ec1839;
+  color: var(--skin-color);
 }
 
 .home .home-info h3.my-profession {
@@ -293,13 +311,13 @@ row {
 }
 
 .home .home-info h3.my-profession .typing {
-  color: #ec1839;
+  color: var(--skin-color);
 }
 
 .home .home-info p {
   margin-bottom: 70px;
   font-size: 20px;
-  color: #504e70;
+  color: var(--text-black-700);
 }
 
 .home .home-img {
@@ -318,8 +336,8 @@ row {
   width: 80px;
   right: 20px;
   bottom: -40px;
-  border-bottom: 10px solid #ec1839;
-  border-right: 10px solid #ec1839;
+  border-bottom: 10px solid var(--skin-color);
+  border-right: 10px solid var(--skin-color);
 }
 
 .home .home-img::before {
@@ -329,8 +347,8 @@ row {
   width: 80px;
   left: 20px;
   top: -40px;
-  border-top: 10px solid #ec1839;
-  border-left: 10px solid #ec1839;
+  border-top: 10px solid var(--skin-color);
+  border-left: 10px solid var(--skin-color);
 }
 
 .home .home-img img {
@@ -356,17 +374,17 @@ row {
   font-size: 24px;
   margin-bottom: 15px;
   font-weight: 700px;
-  color: #302e4d;
+  color: var(--text-black-900);
 }
 
 .about .about-content .about-text h3 span {
-  color: #ec1839;
+  color: var(--skin-color);
 }
 
 .about .about-content .about-text p {
   font-size: 16px;
   line-height: 25px;
-  color: #504e70;
+  color: var(--text-black-700);
 }
 
 .about .about-content .personal-info {
@@ -390,13 +408,13 @@ row {
   font-size: 16px;
   font-weight: 600;
   padding: 10px;
-  color: #302e4d;
-  border-bottom: 1px solid #e8dfec;
+  color: var(--text-black-900);
+  border-bottom: 1px solid var(--bg-black-50);
 }
 
 .about .about-content .personal-info .info-item p span {
   font-weight: 400;
-  color: #504e70;
+  color: var(--text-black-700);
   margin-left: 4px;
   display: inline-block;
 }
@@ -418,7 +436,8 @@ row {
   margin-top: 40px;
 }
 
-.about .about-content .education, .about .about-content .experience {
+.about .about-content .education,
+.about .about-content .experience {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
@@ -429,7 +448,7 @@ row {
   font-size: 24px;
   margin-bottom: 30px;
   font-weight: 700;
-  color: #302e4d;
+  color: var(--text-black-900);
 }
 
 .about .about-content .timeline-box {
@@ -440,9 +459,9 @@ row {
 }
 
 .about .about-content .timeline {
-  background-color: #fdf9ff;
+  background-color: var(--bg-black-100);
   padding: 30px 15px;
-  border: 1px solid #e8dfec;
+  border: 1px solid var(--bg-black-50);
   width: 100%;
   border-radius: 10px;
   position: relative;
@@ -465,7 +484,7 @@ row {
   height: 100%;
   left: 7px;
   top: 0;
-  background-color: #ec1839;
+  background-color: var(--skin-color);
 }
 
 .about .about-content .timeline .circle-dot {
@@ -475,14 +494,14 @@ row {
   height: 15px;
   width: 15px;
   border-radius: 50%;
-  background-color: #ec1839;
+  background-color: var(--skin-color);
 }
 
 .about .about-content .timeline .timeline-date {
   font-weight: 400;
   font-size: 14px;
   margin-bottom: 12px;
-  color: #504e70;
+  color: var(--text-black-700);
 }
 
 .about .about-content .timeline .timeline-date .fa {
@@ -494,14 +513,14 @@ row {
   font-size: 18px;
   margin-bottom: 15px;
   text-transform: capitalize;
-  color: #302e4d;
+  color: var(--text-black-900);
 }
 
 .about .about-content .timeline .timeline-text {
   line-height: 25px;
   font-size: 16px;
   text-align: justify;
-  color: #504e70;
+  color: var(--text-black-700);
 }
 
 skill {
@@ -518,12 +537,12 @@ skill h5 {
   line-height: 40px;
   font-weight: 600;
   font-size: 16px;
-  color: #302e4d;
+  color: var(--text-black-900);
   text-transform: capitalize;
 }
 
 skill .progress {
-  background-color: #e8dfec;
+  background-color: var(--bg-black-50);
   height: 7px;
   border-radius: 4px;
   width: 100%;
@@ -536,7 +555,7 @@ skill .progress .progress-in {
   top: 0;
   height: 100%;
   border-radius: 4px;
-  background-color: #ec1839;
+  background-color: var(--skin-color);
 }
 
 skill .progress .skill-precent {
@@ -563,8 +582,8 @@ Start Services Section
 }
 
 .service .service-item .service-item-inner {
-  background-color: #fdf9ff;
-  border: 1px solid #e8dfec;
+  background-color: var(--bg-black-100);
+  border: 1px solid var(--bg-black-50);
   border-radius: 10px;
   padding: 30px 15px;
   text-align: center;
@@ -578,7 +597,7 @@ Start Services Section
 }
 
 .service .service-item .service-item-inner:hover .icon {
-  background-color: #ec1839;
+  background-color: var(--skin-color);
 }
 
 .service .service-item .service-item-inner:hover .icon .fa {
@@ -600,7 +619,7 @@ Start Services Section
 .service .service-item .service-item-inner .icon .fa {
   font-size: 40px;
   line-height: 60px;
-  color: #ec1839;
+  color: var(--skin-color);
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
@@ -608,14 +627,14 @@ Start Services Section
 .service .service-item .service-item-inner h4 {
   font-size: 18px;
   margin-bottom: 15px;
-  color: #302e4d;
+  color: var(--text-black-900);
   font-weight: 700;
   text-transform: capitalize;
 }
 
 .service .service-item .service-item-inner p {
   font-size: 16px;
-  color: #504e70;
+  color: var(--text-black-700);
   line-height: 25px;
 }
 
@@ -635,7 +654,7 @@ Start Services Section
 }
 
 .portfolio .portfolio-heading h2 {
-  color: #302e4d;
+  color: var(--text-black-900);
   font-weight: 500;
 }
 
@@ -648,7 +667,7 @@ Start Services Section
 }
 
 .portfolio .portfolio-item .portfolio-item-inner {
-  border: 6px solid #fdf9ff;
+  border: 6px solid var(--bg-black-100);
   border-radius: 6px;
   overflow: hidden;
   cursor: pointer;
@@ -663,14 +682,14 @@ Start Services Section
     Start Portfolio Section
 */
 .contact .contact-title {
-  color: #ec1839;
+  color: var(--skin-color);
   text-align: center;
   font-size: 25px;
   margin-bottom: 20px;
 }
 
 .contact .contact-sub-title {
-  color: #302e4d;
+  color: var(--text-black-900);
   text-align: center;
   font-size: 15px;
 }
@@ -692,13 +711,13 @@ Start Services Section
 
 .contact .contact-info-item .icon .fa {
   font-size: 25px;
-  color: #ec1839;
+  color: var(--skin-color);
 }
 
 .contact .contact-info-item h4 {
   font-size: 18px;
   font-weight: 700;
-  color: #302e4d;
+  color: var(--text-black-900);
   text-transform: capitalize;
   margin: 15px 0 5px;
 }
@@ -706,7 +725,7 @@ Start Services Section
 .contact .contact-info-item p {
   font-size: 16px;
   line-height: 25px;
-  color: #504e70;
+  color: var(--text-black-700);
   font-weight: 400;
 }
 
@@ -742,11 +761,11 @@ Start Services Section
   width: 100%;
   height: 50px;
   border-radius: 25px;
-  background-color: #fdf9ff;
-  border: 1px solid #e8dfec;
+  background-color: var(--bg-black-100);
+  border: 1px solid var(--bg-black-50);
   padding: 10px 25px;
   font-size: 16px;
-  color: #504e70;
+  color: var(--text-black-700);
   -webkit-transform: all 0.3s ease;
           transform: all 0.3s ease;
 }
