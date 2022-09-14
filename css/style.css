@@ -842,6 +842,9 @@ Start Services Section
 }
 
 @media (max-width: 1199px) {
+  .section .container {
+    padding-top: 70px;
+  }
   aside {
     left: -270px;
   }
