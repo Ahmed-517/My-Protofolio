@@ -203,14 +203,18 @@ aside ul li a i {
   margin-right: 15px;
 }
 
-.main-content {
-  padding-left: 270px;
-}
-
 .section {
   background: var(--bg-black-100);
   min-height: 100vh;
   display: block;
+  position: fixed;
+  left: 270px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
   opacity: 1;
   padding: 0 30px;
 }
@@ -254,6 +258,39 @@ aside ul li a i {
   top: 100%;
   left: 0;
   margin-top: 8px;
+}
+
+.section.back-section {
+  z-index: 1;
+}
+
+.section.active {
+  z-index: 2;
+  opacity: 1;
+  -webkit-animation: slideSection .6s ease;
+          animation: slideSection .6s ease;
+}
+
+@-webkit-keyframes slideSection {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes slideSection {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
 }
 
 .padd-15 {
@@ -788,8 +825,27 @@ Start Services Section
   aside {
     left: -270px;
   }
-  .main-content {
-    padding-left: 0;
+  aside.open {
+    left: 0;
+  }
+  aside .nav-toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    left: 30px;
+  }
+  aside .nav-toggle.open {
+    left: 300px;
+  }
+  .section {
+    left: 0;
+  }
+  .section.open {
+    left: 270px;
+  }
+  .about .about-content .personal-info .info-item p span {
+    display: block;
+    margin-left: 0;
   }
 }
 
