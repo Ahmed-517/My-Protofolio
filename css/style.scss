@@ -85,7 +85,7 @@ aside {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    transition: all 0.3s ease;
     .logo {
         position: absolute;
         top: 50px;
@@ -143,6 +143,7 @@ aside {
         // display: flex;
         align-items: center;
         justify-content: center;
+        transition: all 0.3s ease;
 
         span {
             height: 2px;
@@ -172,7 +173,17 @@ aside {
             }
         }
     }
-
+    .nav-toggle.open span {
+        background-color: transparent;
+        &::before {
+            transform: rotate(45deg);
+            top: 0;
+        }
+        &::after {
+            transform: rotate(-45deg);
+            top: 0;
+        }
+    }
     ul {
         list-style: none;
 
