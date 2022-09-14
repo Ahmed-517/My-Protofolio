@@ -85,6 +85,8 @@ aside {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 aside .logo {
@@ -147,6 +149,8 @@ aside .nav-toggle {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 aside .nav-toggle span {
@@ -175,6 +179,22 @@ aside .nav-toggle span:after {
   position: absolute;
   top: 6px;
   left: 0;
+}
+
+aside .nav-toggle.open span {
+  background-color: transparent;
+}
+
+aside .nav-toggle.open span::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 0;
+}
+
+aside .nav-toggle.open span::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 0;
 }
 
 aside ul {
